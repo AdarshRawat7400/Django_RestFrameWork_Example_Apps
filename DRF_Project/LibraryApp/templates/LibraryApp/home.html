@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Home Page</title>
+
+<center><h1>Hey This is A Library Home Page !!!!!</h1></center>
+<h3>Library Name :{{libraryname}}</h3>
+<h3>Library Description :{{description}}</h3>
+
+</head>
+<a href = "{% url 'books' %}">Click here to see all books available</a><br><br><br><br>
+<li><a href="{% url 'book_add'  %}">Add Book</a></h2></li>
+
+<body>
+    {% if messages %}
+{% for message in messages %}
+ 
+<h1>{{message}}</h1>
+{% endfor %}
+{% endif %}
+</body>
+</html>
